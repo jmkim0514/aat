@@ -1,0 +1,59 @@
+{
+    "name": "slave",
+    "port_list": [
+        {
+            "name": "i_clk",
+            "direction": "input",
+            "dtype": {
+                "type": "logic",
+                "msb": 0,
+                "lsb": 0
+            }
+        },
+        {
+            "name": "i_rstn",
+            "direction": "input",
+            "dtype": {
+                "type": "logic",
+                "msb": 0,
+                "lsb": 0
+            }
+        },
+        {
+            "name": "i_valid",
+            "direction": "input",
+            "dtype": {
+                "type": "logic",
+                "msb": 0,
+                "lsb": 0
+            }
+        },
+        {
+            "name": "o_ready",
+            "direction": "output",
+            "dtype": {
+                "type": "logic",
+                "msb": 0,
+                "lsb": 0
+            }
+        },
+        {
+            "name": "i_data",
+            "direction": "input",
+            "dtype": {
+                "type": "logic",
+                "msb": 31,
+                "lsb": 0
+            }
+        },
+        {
+            "name": "o_data",
+            "direction": "output",
+            "dtype": {
+                "type": "logic",
+                "msb": 31,
+                "lsb": 0
+            }
+        }
+    ]
+}

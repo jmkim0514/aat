@@ -1,0 +1,101 @@
+{
+    "top_name":"top",
+    "port_list":[
+        {
+            "port_name":"CLK",
+            "direction":"input",
+            "width":"",
+            "prefix":"i_",
+            "postfix":"_top"
+        },
+        {
+            "port_name":"RESETn",
+            "direction":"input",
+            "width":"",
+            "prefix":"i_",
+            "postfix":"_top"},
+        {
+            "port_name":"i_DATA",
+            "direction":"input",
+            "width":"[31:0]",
+            "prefix":"i_",
+            "postfix":"_top"
+        },
+        {
+            "port_name":"o_DATA",
+            "direction":"output",
+            "width":"[31:0]",
+            "prefix":"o_",
+            "postfix":"_top"
+        }
+    ],
+
+    "wire_list":[
+        {
+            "name":"u_master_A",
+            "width":0
+        },
+        {
+            "name":"u_master_B",
+            "width":"[31:0]"
+        }
+    ],
+
+    "instance_list":[
+        {
+            "name":"u_master",
+            "type":"master"
+        }
+    ],
+
+    "module_dict":[
+        {
+            "name":"master",
+            "port_list":[
+                {
+                    "name":"clk"
+                },
+                {
+                    "name":"rstn"
+                }
+
+            ]
+        },
+        {
+            "name":"slave",
+            "port_list":[
+                {
+                    "name":"clk"
+                },
+                {
+                    "name":"rstn"
+                }
+
+            ]
+        }
+
+    ],
+    
+    "connection_list":[
+        {
+            "type":"port",
+            "mst":{
+                "inst_type":"master",
+                "inst_name":"u_master",
+                "port":"A",
+                "width":0
+            },
+            "slv":{
+                "inst_type":"slave",
+                "inst_name":"u_slave",
+                "port":"B0",
+                "width":0
+            }
+        },
+
+        {
+            "type":"protocol",
+            "inst_name":["u0_m","u1_s"]
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+
+
+//-----------------------------------------------------------------------------
+// Test 0 - @mark
+//-----------------------------------------------------------------------------
+u_master_0.i_clk    = i_clock
+u_master_0.i_rstn   = i_resetn
+u_master_0.o_valid  = o_test_0_valid
+u_master_0.i_ready  = i_test_0_ready
+u_master_0.o_data   = o_test_0_wdata
+u_master_0.i_data   = i_test_0_rdata
+
+
+//-----------------------------------------------------------------------------
+// Test 1 - @mark
+//-----------------------------------------------------------------------------
+u_master_1.i_clk    = i_clock
+u_master_1.i_rstn   = i_resetn
+u_master_1.o_valid  = u_slave_1.i_valid
+u_master_1.i_ready  = u_slave_1.o_ready
+u_master_1.o_data   = u_slave_1.i_data
+u_master_1.i_data   = u_slave_1.o_data
+
+u_slave_1.i_clk    = i_clock
+u_slave_1.i_rstn   = i_resetn
+
+//-----------------------------------------------------------------------------
+// Test 2 - port+internal, open - @mark
+//-----------------------------------------------------------------------------
+u_master_2.i_clk   = i_clock
+u_master_2.i_rstn  = i_resetn
+u_master_2.o_valid = o_test_2_valid     // type 0
+u_master_2.i_ready = 
+u_master_2.o_data  = o_test_2_wdata     // type 1
+u_master_2.i_data  = i_test_2_rdata
+
+u_slave_2.i_clk   = i_clock
+u_slave_2.i_rstn  = i_resetn
+u_slave_2.i_valid = u_master_2.o_valid  // type 0
+u_slave_2.o_ready = 
+u_slave_2.i_data  = o_test_2_wdata      // type 1
+u_slave_2.o_data  = 
+
+//-----------------------------------------------------------------------------
+// Test 3 - port+internal - @mark
+//-----------------------------------------------------------------------------
+u_master_3.i_clk   = i_clock
+u_master_3.i_rstn  = i_resetn
+u_master_3.o_valid = 
+u_master_3.i_ready = 
+u_master_3.o_data[31:24]  = o_test_3_wdata[15:8]
+u_master_3.o_data[7:0]    = o_test_3_wdata[7:0]
+u_master_3.i_data[31:16]  = i_test_3_rdata[15:0]
+u_master_3.i_data[15:0]  = i_test_3_rdata[15:0]
+
+u_slave_3.i_clk   = i_clock
+u_slave_3.i_rstn  = i_resetn
+u_slave_3.i_valid = 
+u_slave_3.o_ready = 
+u_slave_3.i_data[31:24] = o_test_3_wdata[15:8]
+u_slave_3.i_data[23:8]  = i_test_3_rdata[15:0]
+u_slave_3.i_data[7:0]   = o_test_3_wdata[7:0]
