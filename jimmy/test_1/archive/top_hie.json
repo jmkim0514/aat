@@ -1,0 +1,96 @@
+{
+	"top": {
+		"modname": "top",
+		"filename": "top.v",
+		"ports": [
+			{
+				"name": "top_out",
+				"dir": "output",
+				"msb": 0,
+				"lsb": 0
+			},
+			{
+				"name": "top_in",
+				"dir": "input",
+				"msb": 0,
+				"lsb": 0
+			}
+		]
+	},
+	"insts": [
+		{
+			"modname": "master",
+			"filename": "master.v",
+			"ports": [
+				{
+					"name": "A",
+					"dir": "output",
+					"msb": 0,
+					"lsb": 0
+				},
+				{
+					"name": "B",
+					"dir": "input",
+					"msb": 0,
+					"lsb": 0
+				},
+				{
+					"name": "C",
+					"dir": "input",
+					"msb": 0,
+					"lsb": 0
+				},
+				{
+					"name": "D",
+					"dir": "output",
+					"msb": 0,
+					"lsb": 0
+				},
+				{
+					"name": "E",
+					"dir": "input",
+					"msb": 0,
+					"lsb": 0
+				}
+			],
+			"instname": "u_mst"
+		},
+		{
+			"modname": "slave",
+			"filename": "slave.v",
+			"ports": [
+				{
+					"name": "M",
+					"dir": "input",
+					"msb": 0,
+					"lsb": 0
+				},
+				{
+					"name": "N",
+					"dir": "input",
+					"msb": 0,
+					"lsb": 0
+				},
+				{
+					"name": "O",
+					"dir": "output",
+					"msb": 0,
+					"lsb": 0
+				},
+				{
+					"name": "P",
+					"dir": "input",
+					"msb": 0,
+					"lsb": 0
+				},
+				{
+					"name": "Q",
+					"dir": "input",
+					"msb": 0,
+					"lsb": 0
+				}
+			],
+			"instname": "u_slv"
+		}
+	]
+}

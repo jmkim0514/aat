@@ -1,0 +1,94 @@
+{
+	"con": [
+		{
+			"type": "p2p",
+			"mst": {
+				"inst": "u_mst",
+				"port": "A",
+				"msb": 0,
+				"lsb": 0
+			},
+			"slv": {
+				"inst": "u_slv",
+				"port": "M",
+				"msb": 0,
+				"lsb": 0
+			}
+		},
+		{
+			"type": "p2p",
+			"mst": {
+				"inst": "u_mst",
+				"port": "A",
+				"msb": 0,
+				"lsb": 0
+			},
+			"slv": {
+				"inst": "u_slv",
+				"port": "N",
+				"msb": 0,
+				"lsb": 0
+			}
+		},
+		{
+			"type": "p2p",
+			"mst": {
+				"inst": "u_mst",
+				"port": "B",
+				"msb": 0,
+				"lsb": 0
+			},
+			"slv": {
+				"inst": "u_slv",
+				"port": "O",
+				"msb": 0,
+				"lsb": 0
+			}
+		},
+		{
+			"type": "p2p",
+			"mst": {
+				"inst": "u_mst",
+				"port": "C",
+				"msb": 0,
+				"lsb": 0
+			},
+			"slv": {
+				"inst": "u_slv",
+				"port": "O",
+				"msb": 0,
+				"lsb": 0
+			}
+		},
+		{
+			"type": "p2p",
+			"mst": {
+				"inst": "u_mst",
+				"port": "D",
+				"msb": 0,
+				"lsb": 0
+			},
+			"slv": {
+				"inst": "u_slv",
+				"port": "P",
+				"msb": 0,
+				"lsb": 0
+			}
+		},
+		{
+			"type": "p2p",
+			"mst": {
+				"inst": "u_mst",
+				"port": "E",
+				"msb": 0,
+				"lsb": 0
+			},
+			"slv": {
+				"inst": "u_slv",
+				"port": "Q",
+				"msb": 0,
+				"lsb": 0
+			}
+		}
+	]
+}
